@@ -17,7 +17,7 @@ v = 0
 while True:
     if arduino.in_waiting > 0:
         try:
-            new_v = int(arduino.readline()) * 5
+            new_v = int(arduino.readline())
             if(new_v != v):
                 print(v)
                 v=new_v

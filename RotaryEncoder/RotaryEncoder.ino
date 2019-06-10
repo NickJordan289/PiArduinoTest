@@ -4,6 +4,8 @@
 #define yelLed 9
 #define greLed 8
 
+int multiplier = 5;
+
 int counter = 0;
 int aState;
 int aLastState;
@@ -25,9 +27,9 @@ void loop() {
   aState = digitalRead(outputA);
   if(aState != aLastState) {
     if(digitalRead(outputB) != aState) {
-      counter--;
+      counter -= multiplier;
     } else {
-      counter++;
+      counter += multiplier;
     }
     if(counter < 25) {
       digitalWrite(redLed, HIGH);
