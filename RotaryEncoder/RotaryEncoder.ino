@@ -6,7 +6,7 @@
 
 int multiplier = 5;
 
-int counter = 0;
+int counter = 50;
 int aState;
 int aLastState;
 
@@ -21,6 +21,8 @@ void setup() {
   Serial.begin(9600);
 
   aLastState = digitalRead(outputA);
+
+  digitalWrite(yelLed, HIGH); // default to on
 }
 
 void loop() {
